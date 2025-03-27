@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -6,9 +6,24 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SideBarMobile from './componentes/sidebarMenu/sideBarMobile';
 import Main from './componentes/_main/main';
 import Header from './componentes/_header/Header';
+
+
 const App = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
+    const [lastTouchTime, setLastTouchTime] = useState(0);
+
+    const toggleSidebar = (e) => {
+        const now = Date.now();
+
+        // Prevent double toggle within 500ms
+        if (now - lastTouchTime  < 400) {
+            return;
+        }
+        setLastTouchTime(now);
+
+        setSidebarOpen((prev) => !prev);
+    };
 
 
     useEffect(() => {
@@ -29,7 +44,7 @@ const App = () => {
                 <Header />
                 <div className="content">
                     {/* <Sidebar /> */}
-                    <SideBarMobile isOpen={sidebarOpen} toggleSidebar={() => setSidebarOpen(!sidebarOpen)} isMobile={isMobile} />
+                    <SideBarMobile isOpen={sidebarOpen} toggleSidebar={toggleSidebar} isMobile={isMobile} />
                     <Main />
                 </div>
                 {/* <Footer /> */}
