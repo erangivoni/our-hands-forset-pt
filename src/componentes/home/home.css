@@ -1,0 +1,125 @@
+
+.image{
+    text-align: center;
+    padding: 3rem;
+    background-color: rgb(181, 202, 199);
+}
+
+
+
+.home-image {
+    height: 40vmin;
+    pointer-events: none;
+    border-radius: 50%;
+    text-align: center;
+
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .home-image {
+      animation: home-logo-spin infinite 10s linear;
+    }
+  }
+
+  @keyframes home-logo-spin {
+    0% {
+      transform: rotate(-30deg);
+    }
+    50% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+
+  }
+
+
+
+
+  /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    /* background-color: #000; */
+    color: white;
+  }
+  
+  /* Video Container Styling */
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen */
+    overflow: hidden;
+  }
+  
+  /* Each Video Wrapper */
+  .video-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; /* Fade in/out transition */
+  }
+  
+  .video-wrapper.show {
+    opacity: 1; /* Show the current video */
+  }
+  
+  /* Video Styling */
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures videos cover the screen without distortion */
+  }
+  
+  /* Text Overlay Styling */
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease, transform 1s ease; /* Animation for opacity and movement */
+  }
+  
+  /* Text Fade-In and Movement Animation */
+  .text-overlay.fadeIn {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) translateY(-20px);
+    animation: fadeInAndMove 4s ease-out forwards;
+  }
+  
+  /* Keyframes for text animation */
+  @keyframes fadeInAndMove {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1) translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1) translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.1) translateY(20px);
+    }
+  }
+
+
+  .keep-in-touch{
+    background-color: rgb(176, 226, 208);
+  }
+
+  

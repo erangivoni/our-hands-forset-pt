@@ -1,0 +1,43 @@
+
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(120, 108, 108);
+    background-color: rgb(234, 239, 235);
+    /* position: relative; */
+    top: 10px;
+    left: 10px; /* Start at the left corner */
+    padding: 10px 20px;
+    border-radius: 8px;
+    /* transform: translateX(100vw);  * Start off-screen */
+    transform: translateY(100vh);
+    transition: transform 2s ease-in-out;
+}
+
+.slide-in {
+    /* transform: translateX(0); */
+    transform: translateY(0);
+}
+
+
+.icon {
+    font-size: 1.8rem;
+    color: rgb(94, 200, 184);
+    opacity: 0; /* Start hidden */
+    animation: rotateIcon 1s ease-in-out 3s forwards; /* Start rotation after header is in place */
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}

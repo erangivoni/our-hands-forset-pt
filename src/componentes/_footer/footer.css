@@ -1,0 +1,110 @@
+/* Footer Container */
+.footer {
+    background-color: #3a533d;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Footer Content Wrapper */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0 12% 0 12%;
+}
+
+/* Footer Sections */
+.footer-section {
+    max-width: 20%;
+    text-align: right;
+    align-items: right;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    color: #ddd;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Quick Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    justify-content: right;
+    /* max-width: 30%; */
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    margin: 0 8px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: grid;
+    justify-content: right;
+    gap: 0.2rem;
+    grid-template-columns: repeat(2, auto);
+}
+
+.social-icons a {
+    color: #aaa;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1da1f2;
+    /* Twitter Blue */
+    transform: scale(1.2);
+}
+
+/* Copyright Section */
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 15% 2% 15%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 5% 0% 3% 0%;
+        
+    }
+    .footer-section {
+        max-width: 100%;
+        text-align: right;
+        align-items: right;
+    }
+    .footer-links{
+
+    }
+}

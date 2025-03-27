@@ -1,0 +1,12 @@
+.menu-item {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: right;
+    width: 100%;
+    cursor: pointer;
+    text-align: right;
+}
+
+.arrow {
+    margin-left: 2px; 
+}

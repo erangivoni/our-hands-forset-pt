@@ -1,0 +1,75 @@
+main {
+    text-align: right;
+    background-color: rgb(214, 243, 221);
+    width: 100%; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: auto; 
+    width: 100%;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgb(214, 243, 221); 
+  }
+
+  main .main-start{
+    flex: 1;
+  }
+
+  .page-container {
+    text-align: center;
+    padding: 20px;
+    overflow: auto; 
+    width: 100%;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgb(214, 243, 221); /* Thumb & Track */
+}
+
+.title-p{
+  margin: 0 20px 10px 20px;
+  color: rgb(13, 72, 58);
+  margin-left: auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+main h2{
+    margin: 10px 20px 5px 20px;
+    color: rgb(54, 29, 65);
+    font-size: 50px;
+
+}
+
+
+  @keyframes blurToClear {
+    0% {
+      filter: blur(10px); /* Start with blurred content */
+      opacity: 0.5; /* Optionally make it slightly transparent at the start */
+    }
+    100% {
+      filter: blur(0); /* End with clear content */
+      opacity: 1; /* Fully opaque */
+    }
+  }
+  
+  .blur-to-clear {
+    animation: blurToClear 1s ease-out forwards; /* 1s duration for the effect */
+  }
+
+
+  @keyframes fadeInDisplay {
+    0% {
+      opacity: 0; /* Content starts invisible */
+      transform: translateY(200px); /* Start slightly lower */
+    }
+    100% {
+      opacity: 1; /* Content becomes fully visible */
+      transform: translateY(0); /* Content moves into its normal position */
+    }
+  }
+  
+  .fade-in-display {
+    animation: fadeInDisplay 2s ease-out forwards; /* Apply the animation with 1s duration */
+    visibility: visible; /* Ensure visibility during animation */
+  }
+  

@@ -1,0 +1,52 @@
+/* @keyframes shake1 {
+    0% {
+      transform: translate(0, 0); 
+    }
+    25% {
+      transform: translate(-5px, -5px); 
+    }
+    50% {
+      transform: translate(5px, 5px);  
+    }
+    75% {
+      transform: translate(-5px, 5px);
+    }
+    100% {
+      transform: translate(0, 0); 
+    }
+  } */
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-5deg) translateY(5px);
+    }
+
+    40% {
+        transform: rotate(5deg) translateY(-5px);
+    }
+
+    60% {
+        transform: rotate(-5deg) translateY(5px);
+    }
+
+    80% {
+        transform: rotate(5deg) translateY(-5px);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+.menu-button {
+    display: inline-block;
+    background-color: transparent;
+}

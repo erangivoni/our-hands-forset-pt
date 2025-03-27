@@ -1,0 +1,108 @@
+/* General container styling */
+.join-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f9f9f9, #e3e3e3);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Content box */
+.join-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 470px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Logo styling */
+.join-logo {
+    width: 80px; 
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Title */
+h2 {
+    font-size: 1.8rem;
+    color: #4e7b61;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Description text */
+.join-description {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Benefits list */
+.join-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 ;
+    text-align: right;
+    direction: rtl;
+}
+
+.join-benefits li {
+    font-size: 1rem;
+    color: #555;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Button styling */
+.join-button {
+    background: #27ae60;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.join-button:hover {
+    background: #219150;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .join-content {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        color: #94b9b6;
+    }
+    
+    .join-description {
+        font-size: 1rem;
+    }
+    
+    .join-button {
+        font-size: 1rem;
+    }
+}
