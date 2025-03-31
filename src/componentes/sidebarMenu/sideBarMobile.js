@@ -53,7 +53,7 @@ function SideBarMobile({ isOpen, toggleSidebar, isMobile }) {
                         <MenuLink text={"מי אנחנו"} navto={"about"} location={location} menuSelection={menuSelection} isSub={false} />
                         <MenuLink text={"לוח אירועים"} navto={"events"} location={location} menuSelection={menuSelection} isSub={false} />
 
-                        <MenuLink text={"אקולוגיה וגידול ירק ביער"} navto={"vegetables"} location={location} menuSelection={menuSelection} isSub={false} />
+                        <MenuLink text={"אקולוגיה וגידול ירק"} navto={"vegetables"} location={location} menuSelection={menuSelection} isSub={false} />
                         <MenuLink text={"פעילויות לילדים"} navto={"kids"} location={location} menuSelection={menuSelection} />
 
                         <MenuLink text={"קורסים"} navto={"courses"} location={location} menuSelection={menuSelection} />

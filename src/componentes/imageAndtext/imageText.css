@@ -1,20 +1,19 @@
-/* Styling for the About content section */
+.about-container{
+    background-color: rgb(216, 238, 238);
+    border-radius: 12px;
+}
+
 .about-section {
     display: flex;
-    /* align-items: stretch; */
-    /* align-items: center; */
-    /* align-items: flex-start;  */
     justify-content: space-between;
-    /* max-width: 900px; */
     margin: 50px auto;
     text-align: right;
     gap: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     flex-direction: row-reverse;
-
-    /* Ensures text is on the right and image on the left */
-
-}
+    max-width: 500px;
+    min-width: 300px;
+} 
 
 .about-section-small {
     display: flex;
