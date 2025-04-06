@@ -33,11 +33,11 @@ main {
   line-height: 1.6;
 }
 
-main h2{
-    margin: 10px 20px 5px 20px;
+.main-start h2{
+    margin: 10px 20px 15px 20px;
     color: rgb(54, 29, 65);
-    font-size: 50px;
-
+    font-size: 40px;
+    text-align: right;
 }
 
 
