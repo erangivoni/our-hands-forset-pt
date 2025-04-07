@@ -13,6 +13,7 @@
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     text-align: right;
     transition: right 0.3s ease-in-out;
+    z-index: 900;
 }
 
 .parent-icon {
@@ -181,18 +182,6 @@ nav ul li.active {
 }
 
 
-/* Mobile: Hidden by default */
-@media (max-width: 768px) {
-    .sidebar {
-        right: -260px; 
-        /* display: hidden; */
-    }
-
-    .sidebar.open {
-        right: 0;
-    }
-}
-
 /* Menu toggle button */
 .menu-toggle {
     position: fixed;
@@ -213,4 +202,28 @@ nav ul li.active {
 
 .menu-toggle:hover {
     background: #71bdb0;
+}
+
+
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 890;  
+    pointer-events: auto;
+  }
+
+  /* Mobile: Hidden by default */
+@media (max-width: 768px) {
+    .sidebar {
+        transition: transform 0.7s ease;
+        transform: translateX(100%); /* hidden */
+    }
+
+    .sidebar.open {
+        transform: translateX(0); /* visible */
+    }
 }

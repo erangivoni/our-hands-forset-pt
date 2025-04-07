@@ -35,7 +35,7 @@ const ImageSlider = (props) => {
 
         // animate={{ opacity: 1, x: "-100%", y: "250%" }} // Move to bottom-left
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 2.5, ease: "easeOut" }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
       >
         {images[index].text}
         <div>

@@ -5,25 +5,14 @@ main {
     min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     overflow: auto; 
     width: 100%;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.2) rgb(214, 243, 221); 
   }
 
   main .main-start{
     flex: 1;
   }
-
-  .page-container {
-    text-align: center;
-    padding: 20px;
-    overflow: auto; 
-    width: 100%;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.2) rgb(214, 243, 221); /* Thumb & Track */
-}
 
 .title-p{
   margin: 0 20px 10px 20px;
@@ -71,5 +60,33 @@ main {
   .fade-in-display {
     animation: fadeInDisplay 2s ease-out forwards; /* Apply the animation with 1s duration */
     visibility: visible; /* Ensure visibility during animation */
+  }
+
+  @media (min-width: 769px) {
+    main {
+      scrollbar-width: thin; /* Firefox */
+      scrollbar-color: rgba(0, 0, 0, 0.2) rgb(214, 243, 221);
+    }
+  
+    main::-webkit-scrollbar {
+      width: 6px;
+    }
+  
+    main::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
+  }
+  
+  /* Mobile: Hide scrollbars */
+  @media (max-width: 768px) {
+    main {
+      -ms-overflow-style: none;  /* IE 10+ */
+      scrollbar-width: none;     /* Firefox */
+    }
+  
+    main::-webkit-scrollbar {
+      display: none;             /* Safari, Chrome */
+    }
   }
   
